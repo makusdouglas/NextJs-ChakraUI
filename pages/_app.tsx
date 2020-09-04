@@ -1,11 +1,14 @@
-import ThemeContainer from "../Context/theme/ThemeContainer"
+import ThemeContainer from "../Context/theme/ThemeContainer";
+import { UserContext } from "../store/UserContext";
 
 function MyApp({ Component, pageProps }) {
-    return(
-    <ThemeContainer>
-      <Component {...pageProps} />
-    </ThemeContainer>
-    );
+  return (
+    <UserContext>
+      <ThemeContainer>
+        <Component {...pageProps} />
+      </ThemeContainer>
+    </UserContext>
+  );
 }
 
-export default MyApp
+export default MyApp;
